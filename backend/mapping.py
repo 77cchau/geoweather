@@ -2,8 +2,6 @@ import json
 import urllib.parse
 import urllib.request
 
-APP = Flask(__name__)
-WEATHER_URL_BASE = "https://api.weather.gov/"
 NOMINATIM_URL_BASE =  "https://nominatim.openstreetmap.org/search?"
 
 '''
@@ -17,7 +15,7 @@ def build_map_url(city_name, state_name):
 Uses a generated API URL and returns a tuple with the latitude and
 longitude of a location
 '''
-def access_coords(url):
+def access_data(url):
     response = None
     try:
         request = urllib.request.Request(url)
@@ -26,12 +24,17 @@ def access_coords(url):
         json_text = response.read().decode(encoding = "utf-8")
 
         #Convert json into a python dict
-        return json.loads(json_text)
+        return json.loads(json_text)[0]
     finally:
         #Close the response
         if response != None:
             response.close()
 
-test_map_url = build_map_url("Whittier","California")
-test_dict = access_coords(test_map_url)
-print(test_dict)
+'''
+Gives you the coordinates based on a city and a state
+'''
+def get_coords(city,state):
+    url = build_map_url(city,state)
+    data = access_data(url)
+
+    return (data["lat"],data["lon"])
