@@ -6,7 +6,7 @@ async function verify(event) {
     formData.append('city', document.getElementById('city').value)
     formData.append('time', document.getElementById('time').value)
 
-    await fetch("https://localhost:5000/verify", {
+    await fetch("https://localhost:5000/flask-link", {
         method: 'POST',
         body: formData
     }).then(response => response.text())
