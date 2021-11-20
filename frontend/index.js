@@ -2,21 +2,21 @@ async function verify(event) {
     event.preventDefault();
 
     const formData = new FormData();
-    formData.append('state', document.getElementById('state').value);
-    formData.append('city', document.getElementById('city').value)
-    formData.append('time', document.getElementById('time').value)
+    formData.append('state',document.getElementById('state').value)
+    formData.append('city',document.getElementById('city').value)
 
-    await fetch("https://localhost:5000/verify", {
+    await fetch("http://localhost:5000/verify", {
         method: 'POST',
-        body: formData
+        body: formData 
     }).then(response => response.text())
     .then(data => {
         if (data === "200") {
             alert("success");
-        }
-        else
-        {
-            alert("try again");
+            document.getElementById('state').value = "";
+            document.getElementById('city').value = "";
+
+        } else {
+            alert("try again")
         }
     });
 }
