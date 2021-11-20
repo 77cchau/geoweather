@@ -36,6 +36,3 @@ def get_coords(city,state):
     data = access_data(url)
 
     return (data["lat"],data["lon"])
-
-
-print(get_coords("Las Vegas", "Nevada"))
