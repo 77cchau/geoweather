@@ -2,6 +2,8 @@ import json
 import urllib.parse
 import urllib.request
 
+import mapping
+
 WEATHER_URL_BASE = "https://api.weather.gov/points/"
 
 def build_weather_url(lat,lon):
@@ -46,5 +48,7 @@ def build_forecast_data(lat, lon):
         if response != None:
             response.close()
 
-
-print( build_forecast_data("36.1672559","-115.148516")["properties"]["periods"][0]["detailedForecast"] )
+def get_todays_forecast(city,state):
+    (lat,lon) = mapping.get_coords(city,state)
+    return (build_forecast_data(lat,lon)["properties"]["periods"][0]["detailedForecast"],
+            build_forecast_data(lat,lon)["properties"]["periods"][1]["detailedForecast"])
