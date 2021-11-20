@@ -1,21 +1,27 @@
-from flask import Flask
-from flask import request
-from flask import url_for
+import json
+import urllib.parse
+import urllib.request
 
+WEATHER_URL_BASE = "https://api.weather.gov/points/"
 
-app = Flask(__name__)
+def build_weather_url(lat,lon):
+    return f"{WEATHER_URL_BASE}{lat},{lon}"
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+'''
+Uses link to give back the forecast data for a location
+'''
+def build_weather_data(url):
+    response = None
+    try:
+        request = urllib.request.Request(url)
+        response = urllib.request.urlopen(request)
+        #Get a JSON response
+        json_text = response.read().decode(encoding = "utf-8")
 
-@app.route("/verify", methods=["POST"])
-def verify():
-    if request.form["state"] != None and request.form["city"] != None:
-        return "200"
-    return "403"
+        return json.loads(json_text)
+    finally:
+        #close
+        if response != None:
+            response.close()
 
-@app.route("/search", methods=["POST"])
-def search():
-    pass
-
+print(build_weather_data(build_weather_url("36.1672559","-115.148516")))
