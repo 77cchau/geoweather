@@ -1,0 +1,21 @@
+form {
+    margin: auto;
+    width: 30%; 
+    align-items: center;
+    font-size: large;
+    font-weight: bold; 
+    font-family: 'Bungee Shade', cursive;
+    filter: drop-shadow(0 0 .2rem #0488f3);
+    border: 3px solid #0488f3 !important;
+    border-radius: 50px !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    background: linear-gradient(rgb(232, 242, 248), rgb(8, 124, 201))
+
+    
+}
