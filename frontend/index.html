@@ -1,22 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <h1> Get the Weather </h1>
-        <form id="form" class = "search-form">
-            <label class="search-form-label" for="fstate">State</label>
-            <input class="search-form-textbox" type="textbook" name="fstate">
-            <label class="search-form-label" for="fcity">City</label>
-            <input class="search-form-textbox" type="textbook" name="fcity">
-            <button class="search-form-submit">Search</button>
-        </form>
-    </div>
-</body>
-<script src = "index.js"></script>
+<html>
+    <head>
+        <title>GeoWeather</title>
+    </head>
+    <body>
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city"><br><br>
+        <label for="state">State:</label><br>
+        <input type="text" id="state" name="state"><br><br>
+        <label for="tim">Time:</label><br>
+        <input type="text" id="tim" name="tim"><br><br>
+        <input type="submit" value="What's the Weather?">
+    </body>
 </html>
