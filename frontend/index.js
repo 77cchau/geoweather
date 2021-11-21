@@ -23,6 +23,7 @@ async function verify(event) {
 function AppendData(weather_data) {
     let weather_report = document.getElementById("report_content")
     weather_report.innerHTML = weather_data[0]["detailedForecast"]
+    document.getElementById("report_container").classList.add("card")
 }
 
 function AppendIcon(weather_data) {
