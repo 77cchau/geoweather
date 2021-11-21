@@ -24,7 +24,9 @@ async function verify(event) {
 
 function AppendData(weather_data) {
     let weather_report = document.getElementById("report_content");
+    let weather_title = document.getElementById("report_title");
     weather_report.innerHTML = weather_data[0]["detailedForecast"];
+    weather_title.innerHTML = weather_data[0]["name"]
     document.getElementById("report_container").classList.add("card");
 }
 
