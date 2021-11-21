@@ -15,9 +15,14 @@ async function verify(event) {
             console.log(data);
             document.getElementById('state').value = "";
             document.getElementById('city').value = "";
-
+            AppendData(data);
         } else {
             alert("try again")
         }
     });
+}
+
+function AppendData(weather_data) {
+    weather_report = document.getElementById("report_content")
+    weather_report.innerHTML = weather_data[0]["detailedForecast"]
 }

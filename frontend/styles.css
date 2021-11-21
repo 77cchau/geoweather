@@ -4,7 +4,6 @@ form {
     align-items: center;
     font-size: large;
     font-weight: bold; 
-    font-family: 'Bungee Shade', cursive;
     filter: drop-shadow(0 0 .2rem #0488f3);
     border: 3px solid #0488f3 !important;
     border-radius: 50px !important;
@@ -15,7 +14,17 @@ form {
 body {
     min-height: 100vh;
     display: flex;
-    background: linear-gradient(rgb(232, 242, 248), rgb(8, 124, 201))
+    /* background: linear-gradient(rgb(232, 242, 248), rgb(8, 124, 201)) */
+    background-image: url("https://i.gifer.com/146u.gif");
+    background-size: contain;
 
     
+}
+h1 {
+    font-family: 'Titan One', cursive;
+    text-shadow: 1px 1px .5rem deepskyblue;
+    color: rgb(11, 94, 202) 
+}
+.mb-3 {
+    width: 80%;
 }
