@@ -26,3 +26,8 @@ function AppendData(weather_data) {
     weather_report = document.getElementById("report_content")
     weather_report.innerHTML = weather_data[0]["detailedForecast"]
 }
+
+function AppendIcon(weather_data) {
+    weather_icon = document.getElementById("weather_icon")
+    weather_icon.setAttribute("src", weather_data[0]["icon"])
+}
