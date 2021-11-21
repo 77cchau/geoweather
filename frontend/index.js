@@ -32,7 +32,7 @@ function getIcon(weather) {
     let icons = {"Sunny": "https://img.icons8.com/small/64/000000/sun.png",
                  "Cloudy": "https://img.icons8.com/small/64/000000/cloud.png",
                  "Snow": "https://img.icons8.com/small/64/000000/snow.png",
-                 "Rain": "https://img.icons8.com/small/16/000000/rain.png"
+                 "Rain": "https://img.icons8.com/small/64/000000/rain.png"
                 };
     if (weather.includes("Sunny") || weather.includes("Clear"))
     {
@@ -60,4 +60,3 @@ function AppendIcon(weather_data) {
 
     let weather = weather_data[0]["shortForecast"];
     weather_icon.src = getIcon(weather);
-}
