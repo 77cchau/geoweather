@@ -48,7 +48,13 @@ def build_forecast_data(lat, lon):
         if response != None:
             response.close()
 
+'''
 def get_todays_forecast(city,state):
     (lat,lon) = mapping.get_coords(city,state)
     return (build_forecast_data(lat,lon)["properties"]["periods"][0]["detailedForecast"],
             build_forecast_data(lat,lon)["properties"]["periods"][1]["detailedForecast"])
+'''
+
+def get_forecast_data(city,state):
+    (lat,lon) = mapping.get_coords(city,state)
+    return build_forecast_data(lat,lon)["properties"]["periods"]
