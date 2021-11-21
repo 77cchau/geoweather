@@ -10,8 +10,9 @@ async function verify(event) {
         body: formData 
     }).then(response => response.text())
     .then(data => {
-        if (data === "200") {
+        if (data != null) {
             alert("success");
+            console.log(data);
             document.getElementById('state').value = "";
             document.getElementById('city').value = "";
 
