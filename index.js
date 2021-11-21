@@ -13,7 +13,6 @@ async function verify(event) {
         if (data != "400") {
             document.getElementById('state').value = "";
             document.getElementById('city').value = "";
-            console.log(data);
             if (5 > data.length){
                 let i = data.length;
             }else{
@@ -27,6 +26,8 @@ async function verify(event) {
             }
         } else {
             alert("Search failed, please try another city!")
+            document.getElementById('state').value = "";
+            document.getElementById('city').value = "";
         }
     });
 }
