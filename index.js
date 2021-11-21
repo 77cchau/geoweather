@@ -14,20 +14,29 @@ async function verify(event) {
             document.getElementById('state').value = "";
             document.getElementById('city').value = "";
             console.log(data);
-            AppendData(data);
-            AppendIcon(data);
+            if (5 > data.length){
+                let i = data.length;
+            }else{
+                let i = 5;
+            }
+
+            for (let i = 0; i < 5; i++)
+            {
+                AppendData(data, i);
+                AppendIcon(data, i);
+            }
         } else {
             alert("try again")
         }
     });
 }
 
-function AppendData(weather_data) {
-    let weather_report = document.getElementById("report_content");
-    let weather_title = document.getElementById("report_title");
-    weather_report.innerHTML = weather_data[0]["detailedForecast"];
-    weather_title.innerHTML = weather_data[0]["name"]
-    document.getElementById("report_container").classList.add("card");
+function AppendData(weather_data, i) {
+    let weather_report = document.getElementById(`report_content${i+1}`);
+    let weather_title = document.getElementById(`report_title${i+1}`);
+    weather_report.innerHTML = weather_data[i]["detailedForecast"];
+    weather_title.innerHTML = weather_data[i]["name"]
+    document.getElementById(`report_container${i+1}`).classList.add("card");
 }
 
 function getIcon(weather) {
@@ -57,9 +66,9 @@ function getIcon(weather) {
     }
 }
 
-function AppendIcon(weather_data) {
-    let weather_icon = document.getElementById("weather_icon");
+function AppendIcon(weather_data, i) {
+    let weather_icon = document.getElementById(`weather_icon${i+1}`);
 
-    let weather = weather_data[0]["shortForecast"];
+    let weather = weather_data[i]["shortForecast"];
     weather_icon.src = getIcon(weather);
 }

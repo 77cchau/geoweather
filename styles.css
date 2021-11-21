@@ -1,22 +1,20 @@
 .card {
     margin: auto;
     width: 30%; 
+    min-height: 300px;
     align-items: center;
     font-size: large;
     font-weight: bold; 
     filter: drop-shadow(0 0 .2rem #0488f3);
     border: 3px solid #0488f3 !important;
     border-radius: 50px !important;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    
+    padding: 25px;
+}
+#all_reports_container {
+    display: flex;
+    margin: 25px;
+}
 
-}
-#report_container {
-    text-align: center;
-}
 body {
     min-height: 100vh;
     display: flex;

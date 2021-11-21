@@ -6,11 +6,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Luckiest+Guy&family=Modak&family=Permanent+Marker&family=Titan+One&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <title>GeoWeather</title>
+        <title>US Weather</title>
     </head>
     <body>
         <form class="card"> 
-            <h1>GEOWEATHER</h1>
+            <h1>US Weather</h1>
             <div class="mb-3">          
                 <label for="city" class="form-label">City:</label>
                 <input type="text" class="form-control" id="city" name="city">
@@ -25,10 +25,32 @@
             </div> -->
             <button type="submit" class="btn mt-3 btn-primary" value="What's the Weather?" onClick="verify(event)">What's the Weather?</button>
         </form>
-        <div id="report_container">
-            <p id="report_title"></p>
-            <img id="weather_icon" src="">
-            <p id="report_content"></p>
+        <div id = "all_reports_container">
+            <div id="report_container1">
+                <p id="report_title1"></p>
+                <img id="weather_icon1" src="">
+                <p id="report_content1"></p>
+            </div>
+            <div id="report_container2">
+                <p id="report_title2"></p>
+                <img id="weather_icon2" src="">
+                <p id="report_content2"></p>
+            </div>
+            <div id="report_container3">
+                <p id="report_title3"></p>
+                <img id="weather_icon3" src="">
+                <p id="report_content3"></p>
+            </div>
+            <div id="report_container4">
+                <p id="report_title4"></p>
+                <img id="weather_icon4" src="">
+                <p id="report_content4"></p>
+            </div>
+            <div id="report_container5">
+                <p id="report_title5"></p>
+                <img id="weather_icon5" src="">
+                <p id="report_content5"></p>
+            </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
