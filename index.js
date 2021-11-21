@@ -5,12 +5,12 @@ async function verify(event) {
     formData.append('state',document.getElementById('state').value);
     formData.append('city',document.getElementById('city').value);
 
-    await fetch("https://zothacks21-geoweather.herokuapp.com/verify", {
+    await fetch("http://localhost:5000/verify", {
         method: 'POST',
         body: formData 
     }).then(response => response.json())
     .then(data => {
-        if (data != null) {
+        if (data != "400") {
             document.getElementById('state').value = "";
             document.getElementById('city').value = "";
             console.log(data);
@@ -26,7 +26,7 @@ async function verify(event) {
                 AppendIcon(data, i);
             }
         } else {
-            alert("try again")
+            alert("Search failed, please try another city!")
         }
     });
 }
