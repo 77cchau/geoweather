@@ -43,7 +43,8 @@ function getIcon(weather) {
     let icons = {"Sunny": "https://img.icons8.com/small/64/000000/sun.png",
                  "Cloudy": "https://img.icons8.com/small/64/000000/cloud.png",
                  "Snow": "https://img.icons8.com/small/64/000000/snow.png",
-                 "Rain": "https://img.icons8.com/small/64/000000/rain.png"
+                 "Rain": "https://img.icons8.com/small/64/000000/rain.png",
+                 "Thunder": "https://img.icons8.com/small/64/000000/cloud-lighting.png"
                 };
     if (weather.includes("Sunny") || weather.includes("Clear"))
     {
@@ -60,6 +61,10 @@ function getIcon(weather) {
     else if (weather.includes("Cloudy"))
     {
         return icons["Cloudy"];
+    }
+    else if (weather.includes("Thunderstorms"))
+    {
+        return icons["Thunder"];
     }
     else{
         return "";
