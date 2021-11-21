@@ -5,7 +5,7 @@ async function verify(event) {
     formData.append('state',document.getElementById('state').value);
     formData.append('city',document.getElementById('city').value);
 
-    await fetch("ttps://zothacks21-geoweather.herokuapp.com/verify", {
+    await fetch("https://zothacks21-geoweather.herokuapp.com/verify", {
         method: 'POST',
         body: formData 
     }).then(response => response.json())
