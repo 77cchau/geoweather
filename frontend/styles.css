@@ -1,4 +1,4 @@
-form {
+.card {
     margin: auto;
     width: 30%; 
     align-items: center;
@@ -9,14 +9,21 @@ form {
     border-radius: 50px !important;
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
 
+}
+#report_container {
+    text-align: center;
 }
 body {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     /* background: linear-gradient(rgb(232, 242, 248), rgb(8, 124, 201)) */
     background-image: url("https://i.gifer.com/146u.gif");
-    background-size: contain;
+    background-size: cover;
 
     
 }

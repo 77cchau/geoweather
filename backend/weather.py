@@ -58,11 +58,12 @@ def build_forecast_data(lat, lon):
 Returns a TUPLE of the most current and the next forecast of the day (in the API, this is
 the 0th and 1st index of an array called associated with the "periods" key in "properties")
     Uses "Detailed Forecast" on the pro
-'''
+
 def get_todays_forecast(city,state):
     (lat,lon) = mapping.get_coords(city,state)
     return (build_forecast_data(lat,lon)["properties"]["periods"][0]["detailedForecast"],
             build_forecast_data(lat,lon)["properties"]["periods"][1]["detailedForecast"])
+'''
 
 def get_forecast_data(city,state):
     (lat,lon) = mapping.get_coords(city,state)
