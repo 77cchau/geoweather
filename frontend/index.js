@@ -19,5 +19,4 @@ async function verify(event) {
             alert("try again")
         }
     });
->>>>>>> 855afddb9ffeeb73ab35d2c466e63d3070d1f085
 }
