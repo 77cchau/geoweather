@@ -30,7 +30,9 @@ def access_data(url):
         if response != None:
             response.close()
 
-
+'''
+Gives you the coordinates based on a city and a state
+'''
 def get_coords(city,state):
     url = build_map_url(city,state)
     data = access_data(url)
