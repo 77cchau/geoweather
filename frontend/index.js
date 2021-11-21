@@ -60,3 +60,4 @@ function AppendIcon(weather_data) {
 
     let weather = weather_data[0]["shortForecast"];
     weather_icon.src = getIcon(weather);
+}
